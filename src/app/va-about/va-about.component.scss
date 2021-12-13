@@ -1,0 +1,24 @@
+:host {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding-left: 15px;
+  padding-right: 15px;
+  transition: all 0.15s ease 0s;
+  margin-bottom: 90px;
+
+  @media (min-width: 768px) {
+    flex-direction: row;
+    margin-bottom: 306px;
+    justify-content: space-between;
+    gap: 30px;
+  }
+}
+
+p {
+  @media (min-width: 768px) {
+    max-width: 910px;
+    font-size: 42px;
+    line-height: 50px;
+  }
+}

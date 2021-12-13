@@ -1,0 +1,19 @@
+:host {
+  width: 100%;
+  min-height: 1px;
+  padding-left: 15px;
+  padding-right: 15px;
+  transition: all 0.15s ease 0s;
+  margin-bottom: 60px;
+
+
+  @media (min-width: 768px) {
+  margin-bottom: 90px;
+  }
+}
+
+figure {
+  overflow: hidden;
+  margin-bottom: 15px;
+  position: relative;
+}

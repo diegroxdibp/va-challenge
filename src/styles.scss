@@ -1,1 +1,169 @@
-/* You can add global styles to this file, and also import other style files */
+@font-face {
+  font-family: FavoritLight;
+  src: url(./assets/fonts/web/favorit-std-light.woff);
+}
+
+@font-face {
+  font-family: FavoritExtendedLight;
+  src: url(./assets/fonts/web/favorit-std-extended-light.woff);
+}
+:root {
+  --color-black: rgb(29, 29, 29);
+  --color-grey: rgba(255, 255, 255, 0.5);
+  --color-greyz: rgba(0, 0, 0, 0.5);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--color-black);
+}
+
+::selection {
+  background: #00ff21;
+  color: #fff;
+}
+
+video {
+  -webkit-user-drag: element;
+  user-select: none;
+}
+
+a {
+  text-decoration: none;
+  cursor: pointer;
+  -webkit-font-smoothing: antialiased;
+
+  &:visited,
+  &:link {
+    color: white;
+  }
+}
+
+html,
+body,
+main,
+div,
+span,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+a,
+cite,
+img,
+strike,
+strong,
+i,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+table,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section,
+summary,
+mark {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+h1 {
+  font-family: Favorit;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 19px;
+  text-transform: uppercase;
+  color: white;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  margin-bottom: 15px;
+}
+
+h2 {
+  font-family: Favorit;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 22px;
+  line-height: 26px;
+}
+
+h3 {
+  font-family: Favorit;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 19px;
+  /* identical to box height */
+
+  text-transform: uppercase;
+
+  margin-bottom: 15px;
+
+  color: rgba(255, 255, 255, 0.5);
+}
+
+h4 {
+  font-family: Favorit;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 28px;
+  line-height: 33px;
+  color: white;
+
+  @media (min-width: 768px) {
+    font-size: 42px;
+    line-height: 50px;
+  }
+}
+
+p {
+  font-family: Favorit;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 28px;
+  line-height: 33px;
+  color: white;
+}
+
+img {
+  font-size: 18px;
+  color: rgb(204, 204, 204);
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  transform: scale(1.05);
+  transition: transform 0.35s ease-in-out 0s;
+}

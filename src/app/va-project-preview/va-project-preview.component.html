@@ -1,0 +1,11 @@
+<article>
+  <div class="cover" [ngClass]="projectsService ? 'animation' : ''"></div>
+  <figure *ngIf="projectInfo.preview">
+    <img [src]="projectInfo.preview" [alt]="'Preview image of project' + projectInfo.name">
+  </figure>
+  <footer [style.flex-direction]="projectInfo.description ? 'column' : 'row'">
+    <h1>{{ projectInfo.name }}</h1>
+    <h1 *ngIf="projectInfo.date">{{ projectInfo.date }}</h1>
+    <p *ngIf="projectInfo.description">{{ projectInfo.description }}</p>
+  </footer>
+</article>

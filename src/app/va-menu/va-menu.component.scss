@@ -1,0 +1,54 @@
+:host{
+
+}
+
+.menu {
+  position: fixed;
+  top: 0;
+  height: 100vh;
+  width: 100vw;
+  background: rgb(29, 29, 29);
+  transition: all 0.6s ease;
+  z-index: 11;
+
+  &.is-active {
+    opacity: 1;
+    pointer-events: initial;
+  }
+  &.not-active {
+    opacity: 0;
+    pointer-events: none;
+  }
+
+  .va-links,
+  .social-media {
+    position: absolute;
+    left: 15px;
+    display: flex;
+    flex-direction: column;
+    font-family: Favorit;
+    font-style: normal;
+    font-weight: 300;
+    text-transform: uppercase;
+    transition: all 1s ease;
+    &.is-active {
+      left: 15;
+    }
+    &.not-active {
+      display: hidden;
+      left: -500px;
+    }
+  }
+
+  .va-links {
+    top: 82px;
+    font-size: 50.875px;
+    line-height: 60px;
+  }
+
+  .social-media {
+    bottom: 15px;
+    font-size: 22px;
+    line-height: 26px;
+  }
+}

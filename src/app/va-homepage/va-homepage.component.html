@@ -1,0 +1,17 @@
+<video preload="metadata" [autoplay]="true" [muted]="true" loop alt="v-a reel">
+  <source src="../../assets/homepage/v-a_reel_1080p.mp4" type="video/mp4">
+  <!-- <track label="English" kind="descriptions" srclang="en" src="resources/myvideo-en.vtt" default>
+    <track label="Portuguese" kind="descriptions" srclang="de" src="resources/myvideo-de.vtt">
+    <track label="Español" kind="captions" srclang="es" src="resources/myvideo-es.vtt"> -->
+</video>
+<section>
+  <app-va-about></app-va-about>
+  <div class="projects-preview">
+    <div *ngFor="let project of projectsService.projects$ | async">
+      <app-va-project-preview [projectInfo]="project" observeVisibility [debounceTime]="1500"
+        (visible)="onVisible($event)" [attr.data-name]="project.name">
+      </app-va-project-preview>
+    </div>
+  </div>
+</section>
+<app-va-footer></app-va-footer>
