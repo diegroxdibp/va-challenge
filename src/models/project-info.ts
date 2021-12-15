@@ -1,5 +1,6 @@
 export interface ProjectInfo {
-  name?: string;
+  id: number
+  name: string;
   date?: number;
   preview?: string;
   loadPreview: boolean;

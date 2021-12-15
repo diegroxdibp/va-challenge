@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { Observable, of } from 'rxjs';
+import { BehaviorSubject, Observable, of } from 'rxjs';
 import { map, tap } from 'rxjs/operators';
 import { ProjectInfo } from 'src/models/project-info';
 import { mockData } from './mock-data';
@@ -8,24 +8,24 @@ import { mockData } from './mock-data';
   providedIn: 'root'
 })
 export class MockDataService {
-  projects$: Observable<ProjectInfo[]>;
+  projects$: BehaviorSubject<ProjectInfo[]>;
   constructor() {
-    this.projects$ = of(mockData);
+    this.projects$ = new BehaviorSubject<ProjectInfo[]>(mockData);
   }
   updatePreviewStatus(projectName: string, loadPreviewStatus: boolean) {
-    this.projects$.pipe(
-      tap(a => console.log(a)),
-      // map(a => console.log(a)),
-      // tap(a => console.log(a)),
-    );
-    // this.projects = this.projects.map((project: ProjectInfo) => {
-    //   if (project.name == projectName) {
-    //     if (!project.loadPreview) {
-    //       const clone = { ...project }
-    //       clone.loadPreview = loadPreviewStatus;
-    //     }
-    //     return project;
-    //   } else return project
-    // })
+    //   let updatedProjectsArray;
+    //   this.projects$.pipe(
+    //     tap(projectsArray => {
+    //       projectsArray.forEach(project => {
+    //         if (project.name === projectName) {
+    //           const projectKey = projectsArray.indexOf(project);
+    //           let updatedProject = Object.assign({}, project);
+    //           updatedProject.loadPreview = loadPreviewStatus;
+    //           updatedProjectsArray = [...projectsArray]
+    //           updatedProjectsArray[projectKey] = updatedProject;
+    //         }
+    //       })
+    //     })
+    //   ).next(updatedProjectsArray);
   }
 }

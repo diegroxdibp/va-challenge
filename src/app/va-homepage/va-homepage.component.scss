@@ -23,13 +23,14 @@ section {
   width: 100%;
   height: 100%;
   margin-bottom: 90px;
+  overflow: hidden;
   @media (min-width: 768px) {
     margin-bottom: 275px;
   }
+
   .projects-preview {
     padding-left: 15px;
     padding-right: 15px;
-    transition: all 0.15s ease 0s;
 
     @media (min-width: 768px) {
       width: 100%;

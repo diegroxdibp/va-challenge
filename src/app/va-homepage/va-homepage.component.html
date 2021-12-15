@@ -7,9 +7,9 @@
 <section>
   <app-va-about></app-va-about>
   <div class="projects-preview">
-    <div *ngFor="let project of projectsService.projects$ | async">
-      <app-va-project-preview [projectInfo]="project" observeVisibility [debounceTime]="1500"
-        (visible)="onVisible($event)" [attr.data-name]="project.name">
+    <div *ngFor="let project of projectsService.projects$ | async" bnIntersectionObserverA #intersection="intersection"
+      [ngSwitch]="intersection.isIntersecting">
+      <app-va-project-preview *ngSwitchCase="intersection.IS_INTERSECTING" [projectInfo]="project" routerLink="project">
       </app-va-project-preview>
     </div>
   </div>
